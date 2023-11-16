@@ -1,5 +1,5 @@
 # Survival-ML
-this game is the same game as Survival-AMD, but this time the user doesnt play himself, instead the system goes thru machine learning. 
+this game is the same game as Survival-Manual, but this time the user doesnt play himself, instead the system goes thru machine learning. 
 This game is to observe how predators adopts strategy to eat prey.   
 There are three objects   
   a/ Plants who grow, die and reborn every X iterations , they hold calories   
