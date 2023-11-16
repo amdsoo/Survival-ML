@@ -1,0 +1,6 @@
+Simulation Cycles,250,
+Reward Move:,1,
+Reward Eat:,2,
+Reward Birth:,7,
+Game,Score,Total number of actions,% correct prediction move,% correct prediction eat,% correct prediction birth,Number of Predator,
+1,-4,68,10.0%,47.83%,40.0%,3,
