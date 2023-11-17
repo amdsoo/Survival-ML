@@ -8,27 +8,27 @@ There are three objects
 
 in the declaration.py, you can change some of the parameters
 # simulation inputs
-random.seed (2023)
-number_max_cycles = 250
-number_plants_ini = 250
-number_preys_ini  = 150
-number_predators_ini = 1
-number_prey_limit = 500
+random.seed (2023)  
+number_max_cycles = 250  
+number_plants_ini = 250  
+number_preys_ini  = 150  
+number_predators_ini = 1  
+number_prey_limit = 500  
 
-# simulation reward
-predator_reproduce_reward = 7
-predator_eat_reward       = 2
-predator_move_reward      = 1
+# simulation reward  
+predator_reproduce_reward = 7  
+predator_eat_reward       = 2  
+predator_move_reward      = 1  
 
-in the agent.py, you can also edit some of the torch parameters
-self.n_games = 0  
+in the agent.py, you can also edit some of the torch parameters  
+self.n_games = 0   
 self.epsilon = 0.001  # randomness  
 self.gamma = 0.75  # discount rate  
 self.memory = deque(maxlen=MAX_MEMORY)  # popleft() 
 self.model = Linear_QNet(4,128,4)  
 self.trainer = QTrainer(self.model, lr=LR, gamma=self.gamma)  
 
-edit classes.py for the animal parameters
+edit classes.py for the animal parameters  
 /for predators    
 		self.vision_angle = 20  
 		self.vision_distance = 200  
