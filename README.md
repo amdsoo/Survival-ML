@@ -4,7 +4,7 @@ This game is to observe how predators adopts strategy to eat prey.
 There are three objects   
   a/ Plants who grow, die and reborn every X iterations , they hold calories   
   b/ Prey who are not smart, they randomly move and eat plant if they meet them, Prey die if no food, or too old, or eaten by predators  
-  c/ Predators : they can see thru a cone of vision, move or not, and eat or not preys. They reproduce if enough energy, and die if no more energy  
+  c/ Predators : they can see thru a cone of vision, move or not, and eat or not preys. They reproduce if enough energy, and die if no more energy   
 
 
 # edit declaration.py to change some of the parameters  
