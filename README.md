@@ -31,6 +31,7 @@ self.model = Linear_QNet(4,128,4)
 self.trainer = QTrainer(self.model, lr=LR, gamma=self.gamma)  
 
 # edit classes.py to modfy the animal parameters    
+/  
 /for predators    
 		vision_angle = 20 / degrees   
 		vision_distance = 200  / in pixels, the max distance the predator can see  
@@ -42,6 +43,7 @@ self.trainer = QTrainer(self.model, lr=LR, gamma=self.gamma)
 		energy_reproduction_cost= 400 / the cost of reproduction  
 		energy_per_move  = 30  / the cost to move  
 		energy_per_cycle = 2  / the cost to breathe  
+/  
 /for prey  
 		vision_angle = 180  / not used  
 		vision_distance = 150   / not used  
@@ -53,12 +55,12 @@ self.trainer = QTrainer(self.model, lr=LR, gamma=self.gamma)
 		energy_reproduction_cost= 400  / the cost of reproduction  
 		energy_per_move  = 5  / the cost to move  
 		energy_per_cycle = 1  / the cost to breathe  
+/  
 /for plant  
 		energy_reserve_max = 300    / the max energy stored    
 		energy_reserve = 300   / the initial amount at birth    
 		energy_per_cycle = 1   / the cost to breathe  
 		regeneration_time= 25  / the time it takes to reborn  
-		regeneration_step= 0   / internal variable  
 
   # run agent to launch the game  
  
