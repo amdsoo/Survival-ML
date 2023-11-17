@@ -1,4 +1,4 @@
-# Survival-ML
+# Survival-ML introduction
 this game is the same game as Survival-Manual, but this time the user doesnt play himself, instead the system goes thru machine learning. 
 This game is to observe how predators adopts strategy to eat prey.   
 There are three objects   
@@ -6,8 +6,8 @@ There are three objects
   b/ Prey who are not smart, they randomly move and eat plant if they meet them, Prey die if no food, or too old, or eaten by predators  
   c/ Predators : they can see thru a cone of vision, move or not, and eat or not preys. They reproduce if enough energy, and die if no more energy  
 
-in the declaration.py, you can change some of the parameters
-# simulation inputs
+# edit declaration.py to change some of the parameters
+simulation inputs
 random.seed (2023)  
 number_max_cycles = 250  
 number_plants_ini = 250  
@@ -15,7 +15,7 @@ number_preys_ini  = 150
 number_predators_ini = 1  
 number_prey_limit = 500  
 
-# simulation reward  
+simulation reward  
 predator_reproduce_reward = 7  
 predator_eat_reward       = 2  
 predator_move_reward      = 1  
@@ -28,7 +28,7 @@ self.memory = deque(maxlen=MAX_MEMORY)  # popleft()
 self.model = Linear_QNet(4,128,4)  
 self.trainer = QTrainer(self.model, lr=LR, gamma=self.gamma)  
 
-edit classes.py for the animal parameters  
+# edit classes.py to modfy the animal parameters  
 /for predators    
 		self.vision_angle = 20  
 		self.vision_distance = 200  
@@ -58,5 +58,5 @@ edit classes.py for the animal parameters
 		self.regeneration_time= 25  
 		self.regeneration_step= 0  
 
-  # run agent to launch the game   
+  # run agent to launch the game  
  
