@@ -8,17 +8,17 @@ There are three objects
 
 # edit declaration.py to change some of the parameters
 simulation inputs
-random.seed (2023)  
-number_max_cycles = 250  
-number_plants_ini = 250  
-number_preys_ini  = 150  
-number_predators_ini = 1  
-number_prey_limit = 500  
+random.seed (2023)  / comment this if you want full ramdomness 
+number_max_cycles = 250  / change to 500 or 1000 to train on longer periods  
+number_plants_ini = 250  / starting number of plants randomly located  
+number_preys_ini  = 150  / starting number of prey randomly located  
+number_predators_ini = 1 / number of predator to start (randomly located unless 1 is used and placed at the center of the grid)   
+number_prey_limit = 500  / max number of prey , you can decide to put a very large number  
 
 simulation reward  
-predator_reproduce_reward = 7  
-predator_eat_reward       = 2  
-predator_move_reward      = 1  
+predator_reproduce_reward = 7  / the gain if the predator can reproduce. Inversely, if the predator decides to reproduce but not enough energy, the reward is -7
+predator_eat_reward       = 2  / the gain if the predator can eat something. Inversely, if the predator decides to eat, but there is no prey, the reward is -2
+predator_move_reward      = 1  / Moving is reward to 1, but only if the move is towards a locked prey, else it is -1
 
 in the agent.py, you can also edit some of the torch parameters  
 self.n_games = 0   
@@ -30,33 +30,33 @@ self.trainer = QTrainer(self.model, lr=LR, gamma=self.gamma)
 
 # edit classes.py to modfy the animal parameters  
 /for predators    
-		self.vision_angle = 20  
-		self.vision_distance = 200  
-		self.speed = 3  
-		self.direction_change_angle = 20  
-		self.energy_reserve_max = 1500  
-		self.energy_reserve = 600  
-		self.energy_reproduction= 1200  
-		self.energy_reproduction_cost= 400  
-		self.energy_per_move  = 30  
-		self.energy_per_cycle = 2  
+		vision_angle = 20 / degrees   
+		vision_distance = 200  / in pixels, the max distance the predator can see  
+		speed = 3  /pixel per iteration  
+		direction_change_angle = 20 / when making a turn, the predator turns by this amount of degrees  
+		energy_reserve_max = 1500  / the max energy stored  
+		energy_reserve = 600  / the initial amount at birth  
+		energy_reproduction= 1200 / the energy level needed to reproduce  
+		energy_reproduction_cost= 400 / the cost of reproduction  
+		energy_per_move  = 30  / the cost to move  
+		energy_per_cycle = 2  / the cost to breathe  
 /for prey  
-		self.vision_angle = 180  
-		self.vision_distance = 150  
-		self.speed = 2  
-		self.direction_change_angle = 35  
-		self.energy_reserve_max = 1000  
-		self.energy_reserve = 700  
-		self.energy_reproduction= 800  
-		self.energy_reproduction_cost= 400  
-		self.energy_per_move  = 5  
-		self.energy_per_cycle = 1  
+		vision_angle = 180  / not used  
+		vision_distance = 150   / not used  
+		speed = 2   /pixel per iteration  
+		direction_change_angle = 35  / when making a turn, the predator turns by this amount of degrees   
+		energy_reserve_max = 1000 / the max energy stored  
+		energy_reserve = 700  / the initial amount at birth  
+		energy_reproduction= 800  / the energy level needed to reproduce  
+		energy_reproduction_cost= 400  / the cost of reproduction  
+		energy_per_move  = 5  / the cost to move  
+		energy_per_cycle = 1  / the cost to breathe  
 /for plant  
-		self.energy_reserve_max = 300  
-		self.energy_reserve = 300  
-		self.energy_per_cycle = 1  
-		self.regeneration_time= 25  
-		self.regeneration_step= 0  
+		energy_reserve_max = 300    / the max energy stored    
+		energy_reserve = 300   / the initial amount at birth    
+		energy_per_cycle = 1   / the cost to breathe  
+		regeneration_time= 25  / the time it takes to reborn  
+		regeneration_step= 0   / internal variable  
 
   # run agent to launch the game  
  
