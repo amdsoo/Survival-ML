@@ -1,4 +1,4 @@
-# Survival-ML introduction
+# Survival-ML introduction  
 this game is the same game as Survival-Manual, but this time the user doesnt play himself, instead the system goes thru machine learning. 
 This game is to observe how predators adopts strategy to eat prey.   
 There are three objects   
@@ -6,7 +6,8 @@ There are three objects
   b/ Prey who are not smart, they randomly move and eat plant if they meet them, Prey die if no food, or too old, or eaten by predators  
   c/ Predators : they can see thru a cone of vision, move or not, and eat or not preys. They reproduce if enough energy, and die if no more energy  
 
-# edit declaration.py to change some of the parameters
+
+# edit declaration.py to change some of the parameters  
 simulation inputs  
 random.seed (2023)  / comment this if you want full ramdomness   
 number_max_cycles = 250  / change to 500 or 1000 to train on longer periods  
@@ -20,6 +21,7 @@ predator_reproduce_reward = 7  / the gain if the predator can reproduce. Inverse
 predator_eat_reward       = 2  / the gain if the predator can eat something. Inversely, if the predator decides to eat, but there is no prey, the reward is -2  
 predator_move_reward      = 1  / Moving is reward to 1, but only if the move is towards a locked prey, else it is -1  
 
+
 in the agent.py, you can also edit some of the torch parameters  
 self.n_games = 0   
 self.epsilon = 0.001  # randomness  
@@ -28,7 +30,7 @@ self.memory = deque(maxlen=MAX_MEMORY)  # popleft()
 self.model = Linear_QNet(4,128,4)  
 self.trainer = QTrainer(self.model, lr=LR, gamma=self.gamma)  
 
-# edit classes.py to modfy the animal parameters  
+# edit classes.py to modfy the animal parameters    
 /for predators    
 		vision_angle = 20 / degrees   
 		vision_distance = 200  / in pixels, the max distance the predator can see  
