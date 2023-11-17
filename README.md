@@ -7,8 +7,8 @@ There are three objects
   c/ Predators : they can see thru a cone of vision, move or not, and eat or not preys. They reproduce if enough energy, and die if no more energy  
 
 # edit declaration.py to change some of the parameters
-simulation inputs
-random.seed (2023)  / comment this if you want full ramdomness 
+simulation inputs  
+random.seed (2023)  / comment this if you want full ramdomness   
 number_max_cycles = 250  / change to 500 or 1000 to train on longer periods  
 number_plants_ini = 250  / starting number of plants randomly located  
 number_preys_ini  = 150  / starting number of prey randomly located  
