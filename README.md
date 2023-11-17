@@ -16,9 +16,9 @@ number_predators_ini = 1 / number of predator to start (randomly located unless 
 number_prey_limit = 500  / max number of prey , you can decide to put a very large number  
 
 simulation reward  
-predator_reproduce_reward = 7  / the gain if the predator can reproduce. Inversely, if the predator decides to reproduce but not enough energy, the reward is -7
-predator_eat_reward       = 2  / the gain if the predator can eat something. Inversely, if the predator decides to eat, but there is no prey, the reward is -2
-predator_move_reward      = 1  / Moving is reward to 1, but only if the move is towards a locked prey, else it is -1
+predator_reproduce_reward = 7  / the gain if the predator can reproduce. Inversely, if the predator decides to reproduce but not enough energy, the reward is -7  
+predator_eat_reward       = 2  / the gain if the predator can eat something. Inversely, if the predator decides to eat, but there is no prey, the reward is -2  
+predator_move_reward      = 1  / Moving is reward to 1, but only if the move is towards a locked prey, else it is -1  
 
 in the agent.py, you can also edit some of the torch parameters  
 self.n_games = 0   
